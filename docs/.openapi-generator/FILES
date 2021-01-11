@@ -1,0 +1,11 @@
+.openapi-generator-ignore
+Apis/MapApi.md
+Apis/WarApi.md
+Models/InlineResponse200.md
+Models/InlineResponse2001.md
+Models/InlineResponse2002.md
+Models/InlineResponse2003.md
+Models/MapItem.md
+Models/MapTextItem.md
+Models/Team.md
+README.md
