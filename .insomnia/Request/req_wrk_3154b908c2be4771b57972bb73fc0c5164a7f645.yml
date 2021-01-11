@@ -1,0 +1,21 @@
+_id: req_wrk_3154b908c2be4771b57972bb73fc0c5164a7f645
+type: Request
+parentId: fld_wrk_3154b908c2be4771b57972bb73fc0c5137745ed7
+modified: 1610347840066
+created: 1610347770376
+url: "{{ base_url }}/worldconquest/maps/{{ mapName }}/static"
+name: /worldconquest/maps/{mapName}/static
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1610347770376
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

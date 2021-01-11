@@ -1,0 +1,19 @@
+_id: env_env_88af54da73152ad589bf1804a926c9262b99291e_sub
+type: Environment
+parentId: env_88af54da73152ad589bf1804a926c9262b99291e
+modified: 1610347840116
+created: 1610343852077
+name: OpenAPI env
+data:
+  scheme: https
+  base_path: /api
+  host: war-service-live.foxholeservices.com
+dataPropertyOrder:
+  "&":
+    - scheme
+    - base_path
+    - mapName
+    - host
+color: null
+isPrivate: false
+metaSortKey: 1610343852077
