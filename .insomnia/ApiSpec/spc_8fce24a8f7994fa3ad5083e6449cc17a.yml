@@ -1,10 +1,10 @@
 _id: spc_8fce24a8f7994fa3ad5083e6449cc17a
 type: ApiSpec
 parentId: wrk_3154b908c2be4771b57972bb73fc0c51
-modified: 1610348140242
+modified: 1610387732421
 created: 1610340445378
 fileName: foxhole
-contents: >
+contents: >-
   openapi: "3.0.3"
 
   info:
@@ -100,6 +100,12 @@ contents: >
           flags:
             example: 0
             type: integer
+        required:
+          - teamId
+          - iconType
+          - x
+          - y
+          - flags
       MapTextItem:
         type: object
         properties:
@@ -118,6 +124,11 @@ contents: >
             enum:
               - Minor
               - Major
+        required:
+          - text
+          - x
+          - y
+          - mapMarkerType
   paths:
     /worldconquest/war:
       get:
@@ -147,6 +158,13 @@ contents: >
                       nullable: true
                     requiredVictoryTowns:
                       type: integer
+                  required:
+                    - warId
+                    - warNumber
+                    - winner
+                    - conquestStartTime
+                    - conquestEndTime
+                    - requiredVictoryTowns
     /worldconquest/maps:
       get:
         tags:
@@ -193,6 +211,11 @@ contents: >
                     dayOfWar:
                       type: integer
                       description: The current in game day of the war
+                  required:
+                    - totalEnlistments
+                    - colonialCasualties
+                    - wardenCasualties
+                    - dayOfWar
     /worldconquest/maps/{mapName}/static:
       get:
         parameters:
@@ -237,6 +260,13 @@ contents: >
                       type: integer
                       example: 2
                       description: Version index, increments whenever this map data changes. Used for caching.
+                  required:
+                    - regionId
+                    - scorchedVictoryTowns
+                    - mapItems
+                    - mapTextItems
+                    - lastUpdated
+                    - version
     /worldconquest/maps/{mapName}/dynamic/public:
       get:
         parameters:
@@ -281,4 +311,11 @@ contents: >
                       type: integer
                       example: 2
                       description: Version index, increments whenever this map data changes. Used for caching.
+                  required:
+                    - regionId
+                    - scorchedVictoryTowns
+                    - mapItems
+                    - mapTextItems
+                    - lastUpdated
+                    - version
 contentType: yaml
