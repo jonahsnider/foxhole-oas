@@ -17,10 +17,9 @@ Class | Method | HTTP request | Description
 <a name="documentation-for-models"></a>
 ## Documentation for Models
 
- - [DynamicMapData](./Models/DynamicMapData.md)
+ - [MapData](./Models/MapData.md)
  - [MapItem](./Models/MapItem.md)
  - [MapTextItem](./Models/MapTextItem.md)
- - [StaticMapData](./Models/StaticMapData.md)
  - [Team](./Models/Team.md)
  - [WarData](./Models/WarData.md)
  - [WarReport](./Models/WarReport.md)
