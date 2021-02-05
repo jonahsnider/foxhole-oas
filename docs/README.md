@@ -17,13 +17,13 @@ Class | Method | HTTP request | Description
 <a name="documentation-for-models"></a>
 ## Documentation for Models
 
- - [InlineResponse200](./Models/InlineResponse200.md)
- - [InlineResponse2001](./Models/InlineResponse2001.md)
- - [InlineResponse2002](./Models/InlineResponse2002.md)
- - [InlineResponse2003](./Models/InlineResponse2003.md)
+ - [DynamicMapData](./Models/DynamicMapData.md)
  - [MapItem](./Models/MapItem.md)
  - [MapTextItem](./Models/MapTextItem.md)
+ - [StaticMapData](./Models/StaticMapData.md)
  - [Team](./Models/Team.md)
+ - [WarData](./Models/WarData.md)
+ - [WarReport](./Models/WarReport.md)
 
 
 <a name="documentation-for-authorization"></a>

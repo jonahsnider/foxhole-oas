@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="worldconquestWarGet"></a>
 # **worldconquestWarGet**
-> inline_response_200 worldconquestWarGet()
+> WarData worldconquestWarGet()
 
 
 
@@ -20,7 +20,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**inline_response_200**](../Models/inline_response_200.md)
+[**WarData**](../Models/WarData.md)
 
 ### Authorization
 

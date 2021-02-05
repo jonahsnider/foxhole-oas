@@ -121,6 +121,144 @@ components:
         - x
         - y
         - mapMarkerType
+    WarData:
+      type: object
+      properties:
+        warId:
+          type: string
+          format: uuid
+        warNumber:
+          type: integer
+        winner:
+          $ref: "#/components/schemas/Team"
+        conquestStartTime:
+          type: integer
+          nullable: true
+        conquestEndTime:
+          type: integer
+          nullable: true
+        requiredVictoryTowns:
+          type: integer
+      required:
+        - warId
+        - warNumber
+        - winner
+        - conquestStartTime
+        - conquestEndTime
+        - requiredVictoryTowns
+    MapNames:
+      type: array
+      items:
+        type: string
+      example:
+        - StonecradleHex
+        - AllodsBightHex
+        - TempestIslandHex
+        - MarbanHollow
+        - ViperPitHex
+        - LinnMercyHex
+        - DeadLandsHex
+        - EndlessShoreHex
+        - GodcroftsHex
+        - FishermansRowHex
+        - WestgateHex
+        - ReachingTrailHex
+        - UmbralWildwoodHex
+        - OarbreakerHex
+        - CallahansPassageHex
+        - DrownedValeHex
+        - FarranacCoastHex
+        - MooringCountyHex
+        - WeatheredExpanseHex
+        - LochMorHex
+    WarReport:
+      type: object
+      properties:
+        totalEnlistments:
+          type: integer
+          description: The total number of enlistements
+        colonialCasualties:
+          type: integer
+          description: The casualties from players on the Colonial team
+        wardenCasualties:
+          type: integer
+          description: The casualties from players on the Warden team
+        dayOfWar:
+          type: integer
+          description: The current in game day of the war
+      required:
+        - totalEnlistments
+        - colonialCasualties
+        - wardenCasualties
+        - dayOfWar
+    StaticMapData:
+      type: object
+      properties:
+        regionId:
+          type: integer
+          example: 1
+          description: Internal region ID for this map.
+        scorchedVictoryTowns:
+          type: integer
+          example: 0
+        mapItems:
+          type: array
+          example: []
+          items:
+            $ref: "#/components/schemas/MapItem"
+        mapTextItems:
+          type: array
+          items:
+            $ref: "#/components/schemas/MapTextItem"
+        lastUpdated:
+          type: integer
+          example: 1524672871955
+          description: Timestamp in milliseconds from epoch of when this map was last updated.
+        version:
+          type: integer
+          example: 2
+          description: Version index, increments whenever this map data changes. Used for caching.
+      required:
+        - regionId
+        - scorchedVictoryTowns
+        - mapItems
+        - mapTextItems
+        - lastUpdated
+        - version
+    DynamicMapData:
+      type: object
+      properties:
+        regionId:
+          type: integer
+          example: 1
+          description: Internal region ID for this map.
+        scorchedVictoryTowns:
+          type: integer
+          example: 0
+        mapItems:
+          type: array
+          items:
+            $ref: "#/components/schemas/MapItem"
+        mapTextItems:
+          type: array
+          example: []
+          items:
+            $ref: "#/components/schemas/MapTextItem"
+        lastUpdated:
+          type: integer
+          example: 1524672871955
+          description: Timestamp in milliseconds from epoch of when this map was last updated.
+        version:
+          type: integer
+          example: 2
+          description: Version index, increments whenever this map data changes. Used for caching.
+      required:
+        - regionId
+        - scorchedVictoryTowns
+        - mapItems
+        - mapTextItems
+        - lastUpdated
+        - version
 paths:
   /worldconquest/war:
     get:
@@ -133,30 +271,7 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  warId:
-                    type: string
-                    format: uuid
-                  warNumber:
-                    type: integer
-                  winner:
-                    $ref: "#/components/schemas/Team"
-                  conquestStartTime:
-                    type: integer
-                    nullable: true
-                  conquestEndTime:
-                    type: integer
-                    nullable: true
-                  requiredVictoryTowns:
-                    type: integer
-                required:
-                  - warId
-                  - warNumber
-                  - winner
-                  - conquestStartTime
-                  - conquestEndTime
-                  - requiredVictoryTowns
+                $ref: "#/components/schemas/WarData"
   /worldconquest/maps:
     get:
       tags:
@@ -168,9 +283,7 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  type: string
+                $ref: "#/components/schemas/MapNames"
   /worldconquest/warReport/{mapName}:
     get:
       parameters:
@@ -189,25 +302,7 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  totalEnlistments:
-                    type: integer
-                    description: The total number of enlistements
-                  colonialCasualties:
-                    type: integer
-                    description: The casualties from players on the Colonial team
-                  wardenCasualties:
-                    type: integer
-                    description: The casualties from players on the Warden team
-                  dayOfWar:
-                    type: integer
-                    description: The current in game day of the war
-                required:
-                  - totalEnlistments
-                  - colonialCasualties
-                  - wardenCasualties
-                  - dayOfWar
+                $ref: "#/components/schemas/WarReport"
   /worldconquest/maps/{mapName}/static:
     get:
       parameters:
@@ -226,39 +321,7 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  regionId:
-                    type: integer
-                    example: 1
-                    description: Internal region ID for this map.
-                  scorchedVictoryTowns:
-                    type: integer
-                    example: 0
-                  mapItems:
-                    type: array
-                    example: []
-                    items:
-                      $ref: "#/components/schemas/MapItem"
-                  mapTextItems:
-                    type: array
-                    items:
-                      $ref: "#/components/schemas/MapTextItem"
-                  lastUpdated:
-                    type: integer
-                    example: 1524672871955
-                    description: Timestamp in milliseconds from epoch of when this map was last updated.
-                  version:
-                    type: integer
-                    example: 2
-                    description: Version index, increments whenever this map data changes. Used for caching.
-                required:
-                  - regionId
-                  - scorchedVictoryTowns
-                  - mapItems
-                  - mapTextItems
-                  - lastUpdated
-                  - version
+                $ref: "#/components/schemas/StaticMapData"
   /worldconquest/maps/{mapName}/dynamic/public:
     get:
       parameters:
@@ -277,36 +340,5 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  regionId:
-                    type: integer
-                    example: 1
-                    description: Internal region ID for this map.
-                  scorchedVictoryTowns:
-                    type: integer
-                    example: 0
-                  mapItems:
-                    type: array
-                    items:
-                      $ref: "#/components/schemas/MapItem"
-                  mapTextItems:
-                    type: array
-                    example: []
-                    items:
-                      $ref: "#/components/schemas/MapTextItem"
-                  lastUpdated:
-                    type: integer
-                    example: 1524672871955
-                    description: Timestamp in milliseconds from epoch of when this map was last updated.
-                  version:
-                    type: integer
-                    example: 2
-                    description: Version index, increments whenever this map data changes. Used for caching.
-                required:
-                  - regionId
-                  - scorchedVictoryTowns
-                  - mapItems
-                  - mapTextItems
-                  - lastUpdated
-                  - version
+                $ref: "#/components/schemas/DynamicMapData"
+

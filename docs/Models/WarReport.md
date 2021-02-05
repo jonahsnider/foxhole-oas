@@ -1,4 +1,4 @@
-# InlineResponse2001
+# WarReport
 ## Properties
 
 Name | Type | Description | Notes

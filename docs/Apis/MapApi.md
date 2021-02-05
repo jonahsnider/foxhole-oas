@@ -36,7 +36,7 @@ No authorization required
 
 <a name="worldconquestMapsMapNameDynamicPublicGet"></a>
 # **worldconquestMapsMapNameDynamicPublicGet**
-> inline_response_200_3 worldconquestMapsMapNameDynamicPublicGet(mapName)
+> DynamicMapData worldconquestMapsMapNameDynamicPublicGet(mapName)
 
 
 
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**inline_response_200_3**](../Models/inline_response_200_3.md)
+[**DynamicMapData**](../Models/DynamicMapData.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ No authorization required
 
 <a name="worldconquestMapsMapNameStaticGet"></a>
 # **worldconquestMapsMapNameStaticGet**
-> inline_response_200_2 worldconquestMapsMapNameStaticGet(mapName)
+> StaticMapData worldconquestMapsMapNameStaticGet(mapName)
 
 
 
@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**inline_response_200_2**](../Models/inline_response_200_2.md)
+[**StaticMapData**](../Models/StaticMapData.md)
 
 ### Authorization
 
@@ -90,7 +90,7 @@ No authorization required
 
 <a name="worldconquestWarReportMapNameGet"></a>
 # **worldconquestWarReportMapNameGet**
-> inline_response_200_1 worldconquestWarReportMapNameGet(mapName)
+> WarReport worldconquestWarReportMapNameGet(mapName)
 
 
 
@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**inline_response_200_1**](../Models/inline_response_200_1.md)
+[**WarReport**](../Models/WarReport.md)
 
 ### Authorization
 
