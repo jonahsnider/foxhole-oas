@@ -1,4 +1,4 @@
-# InlineResponse2002
+# DynamicMapData
 ## Properties
 
 Name | Type | Description | Notes

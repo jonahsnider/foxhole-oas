@@ -1,4 +1,4 @@
-# InlineResponse200
+# WarData
 ## Properties
 
 Name | Type | Description | Notes

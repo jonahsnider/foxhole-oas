@@ -1,4 +1,4 @@
-# InlineResponse2003
+# StaticMapData
 ## Properties
 
 Name | Type | Description | Notes
