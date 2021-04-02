@@ -6,4 +6,4 @@ created: 1610340445376
 name: Foxhole 1
 description: The War API allows developers to query information about the state
   of the current Foxhole World Conquest.
-scope: spec
+scope: design

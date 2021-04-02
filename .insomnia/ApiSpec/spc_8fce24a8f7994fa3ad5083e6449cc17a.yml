@@ -1,7 +1,7 @@
 _id: spc_8fce24a8f7994fa3ad5083e6449cc17a
 type: ApiSpec
 parentId: wrk_3154b908c2be4771b57972bb73fc0c51
-modified: 1612501019235
+modified: 1617369917560
 created: 1610340445378
 fileName: foxhole
 contents: >
@@ -13,7 +13,9 @@ contents: >
     version: "1"
   servers:
     - url: https://war-service-live.foxholeservices.com/api
-      description: Root endpoint
+      description: Live-1
+    - url: https://war-service-live-2.foxholeservices.com/api
+      description: Live-2
     - url: https://war-service-dev.foxholeservices.com/api
       description: Dev branch
   tags:
