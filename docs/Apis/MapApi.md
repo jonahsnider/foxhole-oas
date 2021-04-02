@@ -36,7 +36,7 @@ No authorization required
 
 <a name="worldconquestMapsMapNameDynamicPublicGet"></a>
 # **worldconquestMapsMapNameDynamicPublicGet**
-> DynamicMapData worldconquestMapsMapNameDynamicPublicGet(mapName)
+> MapData worldconquestMapsMapNameDynamicPublicGet(mapName)
 
 
 
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DynamicMapData**](../Models/DynamicMapData.md)
+[**MapData**](../Models/MapData.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ No authorization required
 
 <a name="worldconquestMapsMapNameStaticGet"></a>
 # **worldconquestMapsMapNameStaticGet**
-> StaticMapData worldconquestMapsMapNameStaticGet(mapName)
+> MapData worldconquestMapsMapNameStaticGet(mapName)
 
 
 
@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StaticMapData**](../Models/StaticMapData.md)
+[**MapData**](../Models/MapData.md)
 
 ### Authorization
 
