@@ -5,7 +5,9 @@ info:
   version: "1"
 servers:
   - url: https://war-service-live.foxholeservices.com/api
-    description: Root endpoint
+    description: Live-1
+  - url: https://war-service-live-2.foxholeservices.com/api
+    description: Live-2
   - url: https://war-service-dev.foxholeservices.com/api
     description: Dev branch
 tags:
@@ -306,4 +308,3 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/MapData"
-

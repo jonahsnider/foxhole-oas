@@ -1,4 +1,3 @@
-.openapi-generator-ignore
 Apis/MapApi.md
 Apis/WarApi.md
 Models/MapData.md
