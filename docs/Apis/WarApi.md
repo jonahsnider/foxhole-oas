@@ -4,12 +4,12 @@ All URIs are relative to *https://war-service-live.foxholeservices.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**worldconquestWarGet**](WarApi.md#worldconquestWarGet) | **GET** /worldconquest/war | 
+[**getWarState**](WarApi.md#getWarState) | **GET** /worldconquest/war | 
 
 
-<a name="worldconquestWarGet"></a>
-# **worldconquestWarGet**
-> WarData worldconquestWarGet()
+<a name="getWarState"></a>
+# **getWarState**
+> WarData getWarState()
 
 
 

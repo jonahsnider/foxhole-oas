@@ -129,65 +129,103 @@ components:
         warId:
           type: string
           format: uuid
+          example: 9b33b555-e587-4915-89a5-50eb37f2949d
+          description: Unique ID for the war.
         warNumber:
           type: integer
+          example: 33
+          description: Current war number for the shard.
         winner:
           $ref: "#/components/schemas/Team"
+          example: NONE
         conquestStartTime:
           type: integer
           nullable: true
+          example: 1563291629686
+          description: UNIX timestamp for when conquest started, or `null` if it hasn't started yet.
         conquestEndTime:
           type: integer
           nullable: true
+          example: null
+          description: UNIX timestamp for when conquest ended, or `null` if it hasn't ended yet.
+        resistanceStartTime:
+          type: integer
+          nullable: true
+          example: null
+          description: UNIX timestamp for when resistance phase started, or `null` if it hasn't started yet.
         requiredVictoryTowns:
           type: integer
+          example: 20
+          description: Number of victory towns required to win the war.
       required:
         - warId
         - warNumber
         - winner
         - conquestStartTime
         - conquestEndTime
+        - resistanceStartTime
         - requiredVictoryTowns
     MapNames:
       type: array
       items:
         type: string
       example:
-        - StonecradleHex
-        - AllodsBightHex
+        - TheFingersHex
+        - GreatMarchHex
         - TempestIslandHex
         - MarbanHollow
         - ViperPitHex
-        - LinnMercyHex
+        - BasinSionnachHex
         - DeadLandsHex
+        - HeartlandsHex
         - EndlessShoreHex
-        - GodcroftsHex
-        - FishermansRowHex
         - WestgateHex
-        - ReachingTrailHex
-        - UmbralWildwoodHex
         - OarbreakerHex
-        - CallahansPassageHex
-        - DrownedValeHex
-        - FarranacCoastHex
+        - AcrithiaHex
         - MooringCountyHex
         - WeatheredExpanseHex
         - LochMorHex
+        - MorgensCrossingHex
+        - StonecradleHex
+        - AllodsBightHex
+        - KalokaiHex
+        - RedRiverHex
+        - OriginHex
+        - HowlCountyHex
+        - ShackledChasmHex
+        - SpeakingWoodsHex
+        - TerminusHex
+        - LinnMercyHex
+        - ClansheadValleyHex
+        - GodcroftsHex
+        - NevishLineHex
+        - CallumsCapeHex
+        - FishermansRowHex
+        - UmbralWildwoodHex
+        - ReachingTrailHex
+        - CallahansPassageHex
+        - AshFieldsHex
+        - DrownedValeHex
+        - FarranacCoastHex
     WarReport:
       type: object
       properties:
         totalEnlistments:
           type: integer
-          description: The total number of enlistements
+          description: The number of enlistements.
+          example: 148
         colonialCasualties:
           type: integer
-          description: The casualties from players on the Colonial team
+          description: The number of casualties from players on the Colonial team.
+          example: 202
         wardenCasualties:
           type: integer
-          description: The casualties from players on the Warden team
+          description: The number of casualties from players on the Warden team.
+          example: 222
         dayOfWar:
           type: integer
-          description: The current in game day of the war
+          description: The current in game day of the war.
+          example: 2
       required:
         - totalEnlistments
         - colonialCasualties
@@ -229,6 +267,7 @@ components:
 paths:
   /worldconquest/war:
     get:
+      operationId: get-war-state
       tags:
         - war
       description: Returns data about the current state of the war.
@@ -241,6 +280,7 @@ paths:
                 $ref: "#/components/schemas/WarData"
   /worldconquest/maps:
     get:
+      operationId: list-map-names
       tags:
         - map
       description: List map names.
@@ -253,6 +293,7 @@ paths:
                 $ref: "#/components/schemas/MapNames"
   /worldconquest/warReport/{mapName}:
     get:
+      operationId: get-map-war-report
       parameters:
         - name: mapName
           in: path
@@ -272,6 +313,7 @@ paths:
                 $ref: "#/components/schemas/WarReport"
   /worldconquest/maps/{mapName}/static:
     get:
+      operationId: get-static-map-data
       parameters:
         - name: mapName
           in: path
@@ -291,6 +333,7 @@ paths:
                 $ref: "#/components/schemas/MapData"
   /worldconquest/maps/{mapName}/dynamic/public:
     get:
+      operationId: get-dynamic-public-map-data
       parameters:
         - name: mapName
           in: path

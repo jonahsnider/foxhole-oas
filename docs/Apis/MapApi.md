@@ -4,39 +4,15 @@ All URIs are relative to *https://war-service-live.foxholeservices.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**worldconquestMapsGet**](MapApi.md#worldconquestMapsGet) | **GET** /worldconquest/maps | 
-[**worldconquestMapsMapNameDynamicPublicGet**](MapApi.md#worldconquestMapsMapNameDynamicPublicGet) | **GET** /worldconquest/maps/{mapName}/dynamic/public | 
-[**worldconquestMapsMapNameStaticGet**](MapApi.md#worldconquestMapsMapNameStaticGet) | **GET** /worldconquest/maps/{mapName}/static | 
-[**worldconquestWarReportMapNameGet**](MapApi.md#worldconquestWarReportMapNameGet) | **GET** /worldconquest/warReport/{mapName} | 
+[**getDynamicPublicMapData**](MapApi.md#getDynamicPublicMapData) | **GET** /worldconquest/maps/{mapName}/dynamic/public | 
+[**getMapWarReport**](MapApi.md#getMapWarReport) | **GET** /worldconquest/warReport/{mapName} | 
+[**getStaticMapData**](MapApi.md#getStaticMapData) | **GET** /worldconquest/maps/{mapName}/static | 
+[**listMapNames**](MapApi.md#listMapNames) | **GET** /worldconquest/maps | 
 
 
-<a name="worldconquestMapsGet"></a>
-# **worldconquestMapsGet**
-> List worldconquestMapsGet()
-
-
-
-    List map names.
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**List**](../Models/string.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-<a name="worldconquestMapsMapNameDynamicPublicGet"></a>
-# **worldconquestMapsMapNameDynamicPublicGet**
-> MapData worldconquestMapsMapNameDynamicPublicGet(mapName)
+<a name="getDynamicPublicMapData"></a>
+# **getDynamicPublicMapData**
+> MapData getDynamicPublicMapData(mapName)
 
 
 
@@ -61,9 +37,36 @@ No authorization required
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="worldconquestMapsMapNameStaticGet"></a>
-# **worldconquestMapsMapNameStaticGet**
-> MapData worldconquestMapsMapNameStaticGet(mapName)
+<a name="getMapWarReport"></a>
+# **getMapWarReport**
+> WarReport getMapWarReport(mapName)
+
+
+
+    Returns the number of enlistments, casualties, and other map specific information
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **mapName** | **String**| Map name. | [default to null]
+
+### Return type
+
+[**WarReport**](../Models/WarReport.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+<a name="getStaticMapData"></a>
+# **getStaticMapData**
+> MapData getStaticMapData(mapName)
 
 
 
@@ -88,23 +91,20 @@ No authorization required
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="worldconquestWarReportMapNameGet"></a>
-# **worldconquestWarReportMapNameGet**
-> WarReport worldconquestWarReportMapNameGet(mapName)
+<a name="listMapNames"></a>
+# **listMapNames**
+> List listMapNames()
 
 
 
-    Returns the number of enlistments, casualties, and other map specific information
+    List map names.
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **mapName** | **String**| Map name. | [default to null]
+This endpoint does not need any parameter.
 
 ### Return type
 
-[**WarReport**](../Models/WarReport.md)
+**List**
 
 ### Authorization
 

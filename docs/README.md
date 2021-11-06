@@ -7,11 +7,11 @@ All URIs are relative to *https://war-service-live.foxholeservices.com/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*MapApi* | [**worldconquestMapsGet**](Apis/MapApi.md#worldconquestmapsget) | **GET** /worldconquest/maps | List map names.
-*MapApi* | [**worldconquestMapsMapNameDynamicPublicGet**](Apis/MapApi.md#worldconquestmapsmapnamedynamicpublicget) | **GET** /worldconquest/maps/{mapName}/dynamic/public | Dynamic map data includes map icons that could change over the lifecycle of a map. This includes static bases and static base build sites.
-*MapApi* | [**worldconquestMapsMapNameStaticGet**](Apis/MapApi.md#worldconquestmapsmapnamestaticget) | **GET** /worldconquest/maps/{mapName}/static | Static map data includes things that never change over the lifecycle of a map. This includes map text labels, resource nodes, and world structures. You only need to request this once per map between World Conquests.
-*MapApi* | [**worldconquestWarReportMapNameGet**](Apis/MapApi.md#worldconquestwarreportmapnameget) | **GET** /worldconquest/warReport/{mapName} | Returns the number of enlistments, casualties, and other map specific information
-*WarApi* | [**worldconquestWarGet**](Apis/WarApi.md#worldconquestwarget) | **GET** /worldconquest/war | Returns data about the current state of the war.
+*MapApi* | [**getDynamicPublicMapData**](Apis/MapApi.md#getdynamicpublicmapdata) | **GET** /worldconquest/maps/{mapName}/dynamic/public | Dynamic map data includes map icons that could change over the lifecycle of a map. This includes static bases and static base build sites.
+*MapApi* | [**getMapWarReport**](Apis/MapApi.md#getmapwarreport) | **GET** /worldconquest/warReport/{mapName} | Returns the number of enlistments, casualties, and other map specific information
+*MapApi* | [**getStaticMapData**](Apis/MapApi.md#getstaticmapdata) | **GET** /worldconquest/maps/{mapName}/static | Static map data includes things that never change over the lifecycle of a map. This includes map text labels, resource nodes, and world structures. You only need to request this once per map between World Conquests.
+*MapApi* | [**listMapNames**](Apis/MapApi.md#listmapnames) | **GET** /worldconquest/maps | List map names.
+*WarApi* | [**getWarState**](Apis/WarApi.md#getwarstate) | **GET** /worldconquest/war | Returns data about the current state of the war.
 
 
 <a name="documentation-for-models"></a>
