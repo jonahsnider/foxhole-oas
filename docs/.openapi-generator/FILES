@@ -1,3 +1,4 @@
+.openapi-generator-ignore
 Apis/MapApi.md
 Apis/WarApi.md
 Apis/WarReportApi.md

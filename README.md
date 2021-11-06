@@ -21,5 +21,5 @@ Markdown documentation is generated with [OpenAPI Generator](https://github.com/
 Run this command to generate the documentation:
 
 ```sh
-openapi-generator-cli generate -g markdown -i ./openapi.yml -o docs
+rm -r docs && openapi-generator-cli generate -g markdown -i ./openapi.yml -o docs
 ```
