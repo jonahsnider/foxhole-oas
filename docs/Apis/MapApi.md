@@ -5,7 +5,6 @@ All URIs are relative to *https://war-service-live.foxholeservices.com/api*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getDynamicPublicMapData**](MapApi.md#getDynamicPublicMapData) | **GET** /worldconquest/maps/{mapName}/dynamic/public | 
-[**getMapWarReport**](MapApi.md#getMapWarReport) | **GET** /worldconquest/warReport/{mapName} | 
 [**getStaticMapData**](MapApi.md#getStaticMapData) | **GET** /worldconquest/maps/{mapName}/static | 
 [**listMapNames**](MapApi.md#listMapNames) | **GET** /worldconquest/maps | 
 
@@ -27,33 +26,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**MapData**](../Models/MapData.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-<a name="getMapWarReport"></a>
-# **getMapWarReport**
-> WarReport getMapWarReport(mapName)
-
-
-
-    Returns the number of enlistments, casualties, and other map specific information
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **mapName** | **String**| Map name. | [default to null]
-
-### Return type
-
-[**WarReport**](../Models/WarReport.md)
 
 ### Authorization
 
