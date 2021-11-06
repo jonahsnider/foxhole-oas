@@ -12,7 +12,7 @@ https://raw.githubusercontent.com/jonahsnider/foxhole-oas/main/openapi.yml
 
 Markdown documentation is generated with [OpenAPI Generator](https://github.com/OpenAPITools/openapi-generator).
 
-[**You can read it here**](./docs/README.md)
+[**You can read it here**](./docs/README.md).
 
 ## Contributors
 
