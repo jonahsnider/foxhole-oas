@@ -21,8 +21,8 @@ Class | Method | HTTP request | Description
  - [MapItem](./Models/MapItem.md)
  - [MapTextItem](./Models/MapTextItem.md)
  - [Team](./Models/Team.md)
- - [WarData](./Models/WarData.md)
  - [WarReport](./Models/WarReport.md)
+ - [WarState](./Models/WarState.md)
 
 
 <a name="documentation-for-authorization"></a>

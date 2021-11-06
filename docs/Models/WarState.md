@@ -1,4 +1,4 @@
-# WarData
+# WarState
 ## Properties
 
 Name | Type | Description | Notes

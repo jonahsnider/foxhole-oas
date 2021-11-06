@@ -1,9 +1,10 @@
+.openapi-generator-ignore
 Apis/MapApi.md
 Apis/WarApi.md
 Models/MapData.md
 Models/MapItem.md
 Models/MapTextItem.md
 Models/Team.md
-Models/WarData.md
 Models/WarReport.md
+Models/WarState.md
 README.md

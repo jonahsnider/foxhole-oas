@@ -123,7 +123,7 @@ components:
         - x
         - y
         - mapMarkerType
-    WarData:
+    WarState:
       type: object
       properties:
         warId:
@@ -277,7 +277,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/WarData"
+                $ref: "#/components/schemas/WarState"
   /worldconquest/maps:
     get:
       operationId: list-map-names

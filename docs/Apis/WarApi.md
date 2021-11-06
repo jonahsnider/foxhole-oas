@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getWarState"></a>
 # **getWarState**
-> WarData getWarState()
+> WarState getWarState()
 
 
 
@@ -20,7 +20,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**WarData**](../Models/WarData.md)
+[**WarState**](../Models/WarState.md)
 
 ### Authorization
 
